@@ -2,10 +2,10 @@ const Discord = module.require("discord.js");
 module.exports.run = async (bot,message,args) => {
     let twarn = new Discord.RichEmbed()
     if (!message.member.hasPermission("ADMINISTRATOR")) {
-        let twarn = new Discord.RichEmbed()
+        var warning = new Discord.RichEmbed()
         .setColor('FF0000')
         .setDescription('Недостаточно прав!')
-        message.channel.send(twarn)
+        message.channel.send(warning)
     }
     let dmmember = message.mentions.users.first()
     let dmmessage = args.slice(1).join(' ')
