@@ -1,3 +1,4 @@
+global.Discord = require('discord.js')
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
