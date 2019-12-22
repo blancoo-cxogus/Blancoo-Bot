@@ -1,6 +1,5 @@
 const Discord = module.require("discord.js");
 module.exports.run = async (bot,message,args) => {
-    let twarn = new Discord.RichEmbed()
     if (!message.member.hasPermission("ADMINISTRATOR")) {
         var warning = new Discord.RichEmbed()
         .setColor('FF0000')
