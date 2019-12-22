@@ -12,6 +12,7 @@ module.exports.run = async (bot,message,args) => {
         .setDescription(`${dmmessage}`)
     dmmember.send(dmresult)
     message.delete()
+    let dmee = message.mentions.users.first()
 };
 module.exports.help = {
     name: "dm"
