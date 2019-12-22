@@ -11,7 +11,7 @@ module.exports.run = async (bot,message,args) => {
         .setTitle(':bell: Новое уведомление!')
         .setDescription(`${dmmessage}`)
     dmmember.send(dmresult)
-    await message.delete()
+    message.delete()
 };
 module.exports.help = {
     name: "dm"
