@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
     .setTitle(`${replies[result]} B-монет`)
     .setDescription(`Ваши деньги в пути, осталось ждать около 30-450 минут`)
     .setThumbnail('https://cdn.discordapp.com/attachments/627452935676100618/653619763783925810/image0.png')
-    let rpchannel = message.guild.channels.get('632986932434960444')
+    let rpchannel = message.guild.channels.get('635407432474034206')
 if(!rpchannel) return message.reply("Не удалось найти канал для отчетов");
 rpchannel.send(embed2)
     message.channel.send(embed).then(message.member.removeRole(caseRole))
