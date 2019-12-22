@@ -1,7 +1,7 @@
 const Discord = module.require("discord.js");
 module.exports.run = async (bot,message,args) => {
-    if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply(twarn)
     let twarn = new Discord.RichEmbed()
+    if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply(twarn)
     .setColor('#ff0000')
     .setTitle('Недостаточно прав!')
     let dmmember = message.mentions.users.first()
