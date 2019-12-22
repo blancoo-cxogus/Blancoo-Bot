@@ -10,11 +10,8 @@ module.exports.run = async (bot,message,args) => {
         .setColor('#00ffff')
         .setTitle(':bell: Новое уведомление!')
         .setDescription(`${dmmessage}`)
-    let okayms = new Discord.RichEmbed()
-        .setColor('#00ffff')
-        .setTitle('Сообщение будет отправлено!')
     dmmember.send(dmresult)
-    message.channel.send(okayms)
+    message.delete()
 };
 module.exports.help = {
     name: "dm"
