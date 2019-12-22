@@ -141,4 +141,4 @@ bot.on('voiceStateUpdate',(Old,New)=>{
             });
     }
 });
-bot.login(token);
+bot.login(process.env.BOT_TOKEN)
