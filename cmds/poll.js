@@ -1,5 +1,5 @@
-exports.run = (client, message, args) => {
-    const Discord = require('discord.js')
+ const Discord = require('discord.js')
+ exports.run = (client, message, args) => {
     var poll = args.slice(0).join(' ')
     if(!poll) return message.reply('Укажите вопрос!')
     let embed = new Discord.RichEmbed()
