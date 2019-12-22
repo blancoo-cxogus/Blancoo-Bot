@@ -1,4 +1,5 @@
-  exports.run = async (bot, message, args) => { 
+const Discord = require('discord.js')  
+exports.run = async (bot, message, args) => { 
   let noq = new Discord.RichEmbed()
   .setColor('#ff0000')
   .setTitle('Вопрос не найден.')
