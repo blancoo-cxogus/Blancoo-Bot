@@ -1,11 +1,6 @@
 const Discord = module.require("discord.js");
 module.exports.run = async (bot,message,args) => {
-    if (!message.member.hasPermission("ADMINISTRATOR")) {
-        var warning = new Discord.RichEmbed()
-        .setColor('FF0000')
-        .setDescription('Недостаточно прав!')
-        message.channel.send(warning)
-    }
+    if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply('У вас нету прав!')
     let dmmember = message.mentions.users.first()
     let dmmessage = args.slice(1).join(' ')
     let dmresult = new Discord.RichEmbed()
