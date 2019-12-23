@@ -23,14 +23,13 @@ fs.readdir('./cmds/',(err,files)=>{
 bot.on('ready', () => {
 let status = ['За сервером Blancoo', ',help | Blancoo Gaming']
 let status_res = Math.floor(Math.random() * status.length)
-setImterval(() => {
+setInterval(() => {
 client.user.setActivity(status[status_res], {type: "Playing"}) }, 10000))
     const strftime = require('strftime'); // Без него тут никак xd
-const vremya_po_msk = strftime.timezone(180); // окда
+const vremya_po_msk = strftime.timezone(180);
 setInterval(function() {
 bot.channels.get('652752979979403275').setName(`🕥 ${vremya_po_msk('%H:%M', new Date())} по МСК`);
-}, 60000); // Время обновляется каждую минуту
-// Всё!
+}, 60000);
     console.log(`Запустился бот ${bot.user.username}`);
     bot.generateInvite(["ADMINISTRATOR"]).then(link =>{
         console.log(link);
