@@ -24,8 +24,7 @@ bot.on('ready', () => {
 let status = ['За сервером Blancoo', ',help | Blancoo Gaming']
 let status_res = Math.floor(Math.random() * status.length)
 setImterval(() => {
-client.user.setActivity(status[status_res], {type: "Playing"}) }, 10000)
-})
+client.user.setActivity(status[status_res], {type: "Playing"}) }, 10000))
     const strftime = require('strftime'); // Без него тут никак xd
 const vremya_po_msk = strftime.timezone(180); // окда
 setInterval(function() {
