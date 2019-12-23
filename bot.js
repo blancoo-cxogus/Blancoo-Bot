@@ -21,7 +21,6 @@ fs.readdir('./cmds/',(err,files)=>{
 
 
 bot.on('ready', () => {
-client.on('ready', () => {
 let status = ['За сервером Blancoo', ',help | Blancoo Gaming']
 let status_res = Math.floor(Math.random() * status.length)
 setImterval(() => {
