@@ -21,10 +21,10 @@ fs.readdir('./cmds/',(err,files)=>{
 
 
 bot.on('ready', () => {
-let status = ['За сервером Blancoo', ',help | Blancoo Gaming']
+let status = ['За сервером Blancoo', ',help | Blancoo']
 let status_res = Math.floor(Math.random() * status.length)
 setInterval(() => {
-bot.user.setActivity(status[status_res], {type: "Playing"}) }, 10000)
+bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
     const strftime = require('strftime'); // Без него тут никак xd
 const vremya_po_msk = strftime.timezone(180);
 setInterval(function() {
