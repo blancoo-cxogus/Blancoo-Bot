@@ -21,6 +21,9 @@ fs.readdir('./cmds/',(err,files)=>{
 
 
 bot.on('ready', () => {
+    if (botconfig.activity.watching == true) {
+bot.user.setActivity('за сервером Blancoo')
+}
     const strftime = require('strftime'); // Без него тут никак xd
 const vremya_po_msk = strftime.timezone(180); // окда
 setInterval(function() {
