@@ -55,10 +55,14 @@ bot.channels.get('652752979979403275').setName(`🕥 ${vremya_po_msk('%H:%M', ne
     },5000)
 
 });
-bot.on('guildMemberAdd',(member)=>{
-    let role = member.guild.roles.find(r => r.name === "[I]Незнакомчик");
-    member.addRole(role);
-});
+bot.on('guildMemberAdd', member => { 
+    var channel = member.guild.channels.get('649611799213375498')
+    let welcome = new Discord.RichEmbed()
+        .setColor('#00ffff')
+        .setTitle('Добро пожаловать!')
+        .setDescription(`На наш сервер зашел ${member}!`)
+    channel.send(welcome)
+})
 
 bot.on('message', async message => {
     if(message.author.bot) return;
