@@ -61,7 +61,8 @@ bot.on('guildMemberAdd', member => {
         .setColor('#00ffff')
         .setTitle('Добро пожаловать!')
         .setDescription(`На наш сервер зашел ${member}!`)
-    channel.send(welcome)
+        const pollTopic = await channel.send(welcome)
+    react.pollTopic('🎉')
 })
 
 bot.on('message', async message => {
