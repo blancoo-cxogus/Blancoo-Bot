@@ -61,8 +61,6 @@ bot.on('guildMemberAdd', member => {
         .setColor('#00ffff')
         .setTitle('Добро пожаловать!')
         .setDescription(`На наш сервер зашел ${member}!`)
-    const topic = channel.send(welcome)
-    topic.react(`🎉`)
     channel.send(welcome)
 })
 
