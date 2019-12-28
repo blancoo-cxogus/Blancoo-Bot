@@ -11,7 +11,7 @@ module.exports.run = async (bot,message,args) => {
     let lallas = new Discord.RichEmbed()
      .setColor('#00ffff')
      .setDescription(`${buss} ударил ${uss}, ${ress}`)
-     .setThumbnail('https://c7.hotpng.com/preview/513/710/475/emoji-fist-icon-hand-emoji-transparent-png.jpg')
+     .setThumbnail('https://img.lovepik.com/element/40022/8278.png_860.png')
     if(!uss) return message.reply(' пожайлуста, укажите пользователя')
     if(uss === buss) {
         lallas.setDescription(`${buss} ударил самого себя`)
