@@ -6,7 +6,7 @@ module.exports.run = async (bot,message,args) => {
     let lalla = new Discord.RichEmbed()
      .setColor('#00ffff')
      .setDescription(`${bus} улыбнулся`)
-     .setThumbnail('https://icon2.cleanpng.com/20180328/aae/kisspng-emoji-smiley-happiness-iphone-emoticon-emoji-5abb33c36af8e1.3259570715222179234382.jpg')
+     .setThumbnail('https://img.favpng.com/5/19/22/smiley-emoji-emoticon-face-png-favpng-1TKfgzzxzK8bKbfJHwWg1MT3C.jpg')
     message.channel.send(lalla)
 }
 exports.help = {
