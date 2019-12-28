@@ -4,7 +4,7 @@ module.exports.run = async (bot,message,args) => {
         Array.prototype.random = function() {
         return this[Math.floor(Math.random() * this.length)]
     }
-    let ress = [`но ${uss} увернулся`,`и ${uss} не успел увернутся`].random()
+    let ress = [`но он увернулся`,`и он не успел увернутся`].random()
     let uss = message.mentions.users.first()
     let buss = message.author
     message.delete().catch();
