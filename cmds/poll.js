@@ -2,7 +2,7 @@
 
 exports.run = async (bot, message, args) => { 
 const Discord = require('discord.js')
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(', у вас недостаточно прав!')
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(' у вас недостаточно прав!')
   let noq = new Discord.RichEmbed()
   .setColor('#ff0000')
   .setTitle('Вопрос не найден.')
