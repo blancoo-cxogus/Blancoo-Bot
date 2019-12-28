@@ -14,7 +14,7 @@ module.exports.run = async (bot,message,args) => {
      .setThumbnail('https://cdn.pixabay.com/photo/2017/01/31/23/09/gun-2028034_960_720.png')
     if(!uss) return message.reply(' пожайлуста, укажите пользователя')
     if(uss === buss) {
-        lalla.setDescription(`${buss} ударил самого себя`)
+        lallas.setDescription(`${buss} ударил самого себя`)
     }
     message.channel.send(lallas)
 }
