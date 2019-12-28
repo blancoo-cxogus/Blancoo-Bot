@@ -3,6 +3,7 @@ const fs = require("fs");
 module.exports.run = async (bot,message,args) => {
     let us = message.mentions.users.first()
     let bus = message.author
+    message.delete().catch();
     let lalla = new Discord.RichEmbed()
      .setColor('#00ffff')
      .setDescription(`${bus} выстрелил в ${us}`)
