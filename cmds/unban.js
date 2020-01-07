@@ -20,6 +20,7 @@ exports.run = (bot, message, args) => {
     warnmember.send(warnresult)
     message.channel.send(embed)
     message.guild.member(warnmember).removeRole(banRole)
+    message.delete()
 }
 exports.help = {
     name: 'unban'
