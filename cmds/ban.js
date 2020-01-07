@@ -1,7 +1,9 @@
 exports.run = (client, message, args) => {
     const Discord = require('discord.js')
     const fs = require('fs')
+    let warnmember = message.mentions.users.first()
     let moder = message.author
+    let warnreason = args.slice(1).join(' ')
     var banRole = message.member.roles.get('663622747238301718')
      let warnresult = new Discord.RichEmbed()
         .setColor('#ff0000')
