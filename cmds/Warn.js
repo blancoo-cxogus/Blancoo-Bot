@@ -6,7 +6,7 @@ module.exports.run = async (bot,message,args) => {
     .setTitle('Недостаточно прав!')
     let warnmember = message.mentions.users.first()
     let moder = message.author
-    let warnreason = args.slice(1).join(' ')
+    let warnreason = args.slice(0).join(' ')
     let warnresult = new Discord.RichEmbed()
         .setColor('#ff0000')
         .setTitle('Вам было выдано предупреждение!')
