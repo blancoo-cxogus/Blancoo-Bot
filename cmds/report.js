@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor('#800080')
         .setitle(`Совсем скоро администрация нашего сервера, рассмотрит жалобу на ${rUser.user.tag}`)
         message.channel.send(okaydm)
-let rpchannel = message.guild.channels.find('name', 'mod log')
+let rpchannel = message.guild.channels.find('name', '⌈📰⌋┊логи')
 if(!rpchannel) return message.channel.send("Не удалось найти канал для отчетов");
 rpchannel.send(embed)
 
