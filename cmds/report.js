@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
    if(!args[0]) return bot.send(nouser);
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.reply(nofinduser);
-    let rreason = args.join(" ").slice(2);
+    let rreason = args.join(" ").slice(0);
     if(!rreason) return message.reply(noreason);
 
     let embed = new Discord.RichEmbed()
