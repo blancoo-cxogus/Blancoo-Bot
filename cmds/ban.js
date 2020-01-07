@@ -1,9 +1,12 @@
-exports.run = (client, message, args) => {
+exports.run = (bot, message, args) => {
     const Discord = require('discord.js')
     const fs = require('fs')
+    if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply("у вас недостаточно прав!")
     let warnmember = message.mentions.users.first()
     let moder = message.author
     let warnreason = args.slice(1).join(' ')
+    if (!warnmember) return message.reply("пожайлуста, укажите пользователя")
+    if (!warnreason) return message.reply("пожайлуста, укажите причину бана")
     var banRole = message.member.roles.get('663622747238301718')
      let warnresult = new Discord.RichEmbed()
         .setColor('#ff0000')
