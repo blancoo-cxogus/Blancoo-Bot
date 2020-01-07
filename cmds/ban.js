@@ -7,7 +7,7 @@ exports.run = (bot, message, args) => {
     let warnreason = args.slice(1).join(' ')
     if (!warnmember) return message.reply("пожайлуста, укажите пользователя")
     if (!warnreason) return message.reply("пожайлуста, укажите причину бана")
-    var banRole = message.member.roles.get('r')
+    var banRole = message.guild.roles.find('name', 'BANNED')
      let warnresult = new Discord.RichEmbed()
         .setColor('#ff0000')
         .setTitle('Вам был выдан бан!')
