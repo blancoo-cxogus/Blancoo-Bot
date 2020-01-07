@@ -19,7 +19,7 @@ exports.run = (bot, message, args) => {
         .addField('Подробнее...',`**Модератор:** ${moder}\n**Нарушитель:** ${warnmember}\n**Причина:** ${warnreason}`)
     warnmember.send(warnresult)
     message.channel.send(embed)
-    warnmember.addRole(banRole)
+    message.mentions.users.first.addRole(banRole)
 }
 exports.help = {
     name: 'ban'
