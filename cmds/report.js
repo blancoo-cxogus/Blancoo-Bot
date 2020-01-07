@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
    if(!args[0]) return bot.send(nouser);
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.reply(nofinduser);
-    let rreason = args.join(" ").slice(22);
+    let rreason = args.join(" ").slice(1);
     if(!rreason) return message.reply(noreason);
 
     let embed = new Discord.RichEmbed()
@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 
     let okaydm = new Discord.RichEmbed()
         .setColor('#800080')
-        .setitle(`Совсем скоро администрация нашего сервера, рассмотрит жалобу на ${rUser.user.tag}`)
+        .setTitle(`Совсем скоро администрация нашего сервера, рассмотрит жалобу на ${rUser.user.tag}`)
         message.channel.send(okaydm)
 let rpchannel = message.guild.channels.find('name', '⌈📰⌋┊логи')
 if(!rpchannel) return message.channel.send("Не удалось найти канал для отчетов");
