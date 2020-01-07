@@ -7,7 +7,7 @@ exports.run = (bot, message, args) => {
     let warnreason = args.slice(1).join(' ')
     if (!warnmember) return message.reply("пожайлуста, укажите пользователя")
     if (!warnreason) return message.reply("пожайлуста, укажите причину бана")
-    var banRole = message.member.roles.get('663622747238301718')
+    var banRole = message.member.roles.get('r')
      let warnresult = new Discord.RichEmbed()
         .setColor('#ff0000')
         .setTitle('Вам был выдан бан!')
@@ -19,7 +19,7 @@ exports.run = (bot, message, args) => {
         .addField('Подробнее...',`**Модератор:** ${moder}\n**Нарушитель:** ${warnmember}\n**Причина:** ${warnreason}`)
     warnmember.send(warnresult)
     message.channel.send(embed)
-    message.mentions.users.first.addRole(banRole)
+    warnmember.addRole(banRole)
 }
 exports.help = {
     name: 'ban'
