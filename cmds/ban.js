@@ -24,6 +24,9 @@ exports.run = (bot, message, args) => {
         .setColor('#ff0000')
         .setTitle('Выдан бан!')
         .addField('Подробнее...',`**Модератор:** ${moder}\n**Нарушитель:** ${warnmember}\n**Причина:** ${warnreason}`)
+        let rpchannel = message.guild.channels.find('name', '⌈📰⌋┊логи')
+if(!rpchannel) return message.channel.send("Не удалось найти канал для отчетов");
+rpchannel.send(embed)
     message.guild.member(warnmember).removeRole(dj)
     message.guild.member(warnmember).removeRole(piar)
     message.guild.member(warnmember).removeRole(helper)
