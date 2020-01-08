@@ -8,3 +8,6 @@ module.exports.run = async (bot,message,args) => {
      .setColor('#00ffff')
      .setDescription("Получается: " + answer)
   message.channel.send(result)
+module.exports.help = {
+    name: "plus"
+}
