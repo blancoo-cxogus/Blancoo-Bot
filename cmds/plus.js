@@ -1,7 +1,10 @@
-  let number1 = args[1].split(/ +/g);
-  let number2 = args[2].split(/ +/g);
-  var plus = number1 + number2
+const Discord = module.require("discord.js");
+const fs = require("fs");
+module.exports.run = async (bot,message,args) => {  
+  let a = args[1].split(/ +/g);
+  let b = args[2].split(/ +/g);
+  var answer = a + b
   let result = new Discord.RichEmbed()
      .setColor('#00ffff')
-     .setDescription("Получается: " + plus)
+     .setDescription("Получается: " + answer)
   message.channel.send(result)
