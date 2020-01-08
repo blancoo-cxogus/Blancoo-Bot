@@ -16,6 +16,8 @@ module.exports.run = async (bot,message,args) => {
         .setColor('#ff0000')
         .setTitle('Выдано предупреждение!')
         .addField('Подробнее...',`**Модератор:** ${moder}\n**Нарушитель:** ${warnmember}\n**Причина:** ${warnreason}`)
+    if (!warnmember) return message.reply("пожайлуста, укажите пользователя")
+    if (!warnreason) return message.reply("пожайлуста, укажите причину")
     let rpchannel = message.guild.channels.find('name', '⌈📰⌋┊логи')
 if(!rpchannel) return message.channel.send("Не удалось найти канал для отчетов");
 rpchannel.send(warnokaymsg)
