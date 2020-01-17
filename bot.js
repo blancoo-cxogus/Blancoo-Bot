@@ -61,6 +61,7 @@ let levelslink = new Discord.RichEmbed()
 bot.on('message', msg => {
   if (msg.content === '!levels') {
     msg.reply(levelslink);
+  }};
       
 bot.on('guildMemberAdd', member => { 
     var channel = member.guild.channels.get('649611799213375498')
