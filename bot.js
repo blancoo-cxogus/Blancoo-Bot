@@ -57,10 +57,18 @@ bot.channels.get('652752979979403275').setName(`🕥 ${vremya_po_msk('%H:%M', ne
 });
 let levelslink = new Discord.RichEmbed()
    .setColor('#00ffff')
-   .setDescription('Топ по уровням на нашем сервере: https://mee6.xyz/leaderboard/617301670166003723\nЧтобы посмотреть свой уровень напишите команду: !rank')
+   .setDescription('Топ по уровням на нашем сервере: https://mee6.xyz/leaderboard/617301670166003723\nЧтобы посмотреть свой уровень напишите команду: ``!rank``')
 bot.on('message', msg => {
   if (msg.content === '!levels') {
     msg.channel.send(levelslink);
+  }});
+
+let renklink = new Discord.RichEmbed()
+   .setColor('#00ffff')
+   .setDescription('На картинке показан твой уровень. Твой уровень прокачивается в зависимости от того сколько ты общаешься на сервере. За уровень можно получать роли. Чтобы посмотреть топ по уровням пропиши ``!levels``')
+bot.on('message', msg => {
+  if (msg.content === '!rank') {
+    msg.channel.send(renklink);
   }});
       
 bot.on('guildMemberAdd', member => { 
