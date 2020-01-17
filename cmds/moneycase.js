@@ -6,10 +6,7 @@ exports.run = (client, message, args) => {
     function randomIntInc(low, high) {
         return Math.floor(Math.random() * (high - low + 1) + low);
     }
-    let nocase = new Discord.RichEmbed()
-    .setColor('#00ffff')
-    .setTitle('У вас нету кейсов для открытия!')
-    if(!caseRole) return message.reply(nocase)
+    if(!caseRole) return message.reply("<:xmark:651075973378211847> У вас нет кейсов!")
     let money = randomIntInc(5,20)
     var replies = [`Вы открыли кейс, и получили ${money}`,`Вы открыли кейс, и получили ${money}`]
     var result = Math.floor((Math.random() * replies.length));
@@ -24,7 +21,7 @@ exports.run = (client, message, args) => {
     .setDescription(`Ваши деньги в пути, осталось ждать около 30-450 минут`)
     .setThumbnail('https://cdn.discordapp.com/attachments/627452935676100618/653619763783925810/image0.png')
     let rpchannel = message.guild.channels.get('635407432474034206')
-if(!rpchannel) return message.reply("Не удалось найти канал для отчетов");
+if(!rpchannel) return message.reply("<:xmark:651075973378211847> Не удалось найти канал для отчетов");
 rpchannel.send(embed2)
     message.channel.send(embed).then(message.member.removeRole(caseRole))
 }
