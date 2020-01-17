@@ -12,7 +12,7 @@ exports.run = async (bot, message, args) => {
   .setDescription(`${botmessage}`)
   .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
   let ideachannel = message.guild.channels.find('name', '⌈💡⌋┊идеи')
-if(!ideachannel) return message.channel.send("Не удалось найти канал для отчетов");
+if(!ideachannel) return message.channel.send("<:xmark:651075973378211847> Не удалось найти канал для отчетов");
     if (!args[0]) return message.reply(noq);
   if (!args) return message.reply("Тебе должны голосовать")
     const pollTopic = await ideachannel.send(botreplyi);
