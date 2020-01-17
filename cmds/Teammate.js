@@ -12,7 +12,7 @@ exports.run = async (bot, message, args) => {
   .setColor('#00ffff')
   .setTitle(`🎮 ${player.username} ищет тиммейта в игру ${game}!`)
   .setDescription('Если ты согласен, напиши ему в личные сообщения.')
-  .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
+  .setThumbnail(`${message.author.displayAvatarURL}`)
   let ideachannel = message.guild.channels.find('name', '⌈🎮⌋┊тиммейты')
 if(!ideachannel) return message.channel.send("Не удалось найти канал для отчетов");
     if (!args[0]) return message.reply(noq);
