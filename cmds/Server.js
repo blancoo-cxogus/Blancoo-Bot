@@ -18,13 +18,13 @@ module.exports.run = async (bot, message, args) => {
     .addField("Название", message.guild.name, inline)
     .addField("ID", message.guild.id, inline)
     .addField("Создатель", message.guild.owner, inline)
-    .addField(":Регион", message.guild.region, inline)
+    .addField("Регион", message.guild.region, inline)
     .addField("Уровень модерации", verlvl[message.guild.verificationLevel],inline)
-    .addField("Участники", ${message.guild.memberCount}, inline)
+    .addField("Участники", `${message.guild.memberCount}`, inline)
     .addField("Ролей", message.guild.roles.size, inline)
     .addField("Каналов", message.guild.channels.size, inline)
     .addField("Вы присоединислись", message.member.joinedAt)
-    .setFooter(Создан ${message.guild.createdAt});
+    .setFooter(`Создан ${message.guild.createdAt}`);
     message.channel.send(serverembed);
     message.delete();
 }
