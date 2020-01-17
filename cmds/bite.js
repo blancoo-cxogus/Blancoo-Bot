@@ -11,7 +11,7 @@ module.exports.run = async (bot,message,args) => {
     let lallas = new Discord.RichEmbed()
      .setColor('#00ffff')
      .setDescription(`${buss} укусил ${uss}, ${ress}`)
-    if(!uss) return message.reply(' пожайлуста, укажите пользователя')
+    if(!uss) return bot.send('<:xmark:651075973378211847> Пожайлуста, укажите пользователя')
     if(uss === buss) {
         lallas.setDescription(`${buss} укусил самого себя`)
     }
