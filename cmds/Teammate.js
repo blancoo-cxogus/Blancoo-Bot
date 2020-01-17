@@ -2,9 +2,6 @@
 const Discord = require('discord.js')
 
 exports.run = async (bot, message, args) => { 
-  let noq = new Discord.RichEmbed()
-  .setColor('#ff0000')
-  .setTitle('Использование: ,teammate [Название игры]')
   let player = message.author
   let game = args.join(" ");
   message.delete().catch();
@@ -15,7 +12,7 @@ exports.run = async (bot, message, args) => {
   .setThumbnail(`${message.author.displayAvatarURL}`)
   let ideachannel = message.guild.channels.find('name', '⌈🎮⌋┊тиммейты')
 if(!ideachannel) return message.channel.send("Не удалось найти канал для отчетов");
-    if (!args[0]) return message.reply(noq);
+    if (!args[0]) return bot.send("<:xmark:651075973378211847> Введите игру в которой хотите найти тиммейта");
     ideachannel.send(botreplyi)
 };
 
