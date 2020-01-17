@@ -60,7 +60,7 @@ let levelslink = new Discord.RichEmbed()
    .setDescription('Топ по уровням на нашем сервере: https://mee6.xyz/leaderboard/617301670166003723\nЧтобы посмотреть свой уровень напишите команду: !rank')
 bot.on('message', msg => {
   if (msg.content === '!levels') {
-    msg.reply(levelslink);
+    msg.channel.send(levelslink);
   }});
       
 bot.on('guildMemberAdd', member => { 
