@@ -1,9 +1,6 @@
 const Discord = module.require("discord.js");
 module.exports.run = async (bot,message,args) => {
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply(twarn)
-    let twarn = new Discord.RichEmbed()
-    .setColor('#ff0000')
-    .setTitle('Недостаточно прав!')
+    if (!message.member.hasPermission("KICK_MEMBERS")) return bot.send("<:xmark:651075973378211847> Недостаточно прав!")
     let warnmember = message.mentions.users.first()
     let moder = message.author
     let warnreason = args.slice(1).join(' ')
@@ -16,10 +13,10 @@ module.exports.run = async (bot,message,args) => {
         .setColor('#ff0000')
         .setTitle('Выдано предупреждение!')
         .addField('Подробнее...',`**Модератор:** ${moder}\n**Нарушитель:** ${warnmember}\n**Причина:** ${warnreason}`)
-    if (!warnmember) return message.reply("пожайлуста, укажите пользователя")
-    if (!warnreason) return message.reply("пожайлуста, укажите причину")
+    if (!warnmember) return bot.send("<:xmark:651075973378211847> Пожайлуста, укажите пользователя")
+    if (!warnreason) return bot.send("<:xmark:651075973378211847> Пожайлуста, укажите причину")
     let rpchannel = message.guild.channels.find('name', '⌈📰⌋┊логи')
-if(!rpchannel) return message.channel.send("Не удалось найти канал для отчетов");
+if(!rpchannel) return bot.send("<:xmark:651075973378211847> Не удалось найти логи");
 rpchannel.send(warnokaymsg)
     warnmember.send(warnresult)
     message.channel.send(warnokaymsg)
