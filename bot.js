@@ -58,10 +58,10 @@ bot.channels.get('652752979979403275').setName(`🕥 ${vremya_po_msk('%H:%M', ne
 let levelslink = new Discord.RichEmbed()
    .setColor('#00ffff')
    .setDescription('Топ по уровням на нашем сервере: https://mee6.xyz/leaderboard/617301670166003723\nЧтобы посмотреть свой уровень напишите команду: !rank')
-bot.on('message'), msg => {
+bot.on('message', msg => {
   if (msg.content === '!levels') {
     msg.reply(levelslink);
-  }};
+  }});
       
 bot.on('guildMemberAdd', member => { 
     var channel = member.guild.channels.get('649611799213375498')
