@@ -10,7 +10,7 @@ exports.run = async (bot, message, args) => {
   message.delete().catch();
   let botreplyi = new Discord.RichEmbed()
   .setColor('#00ffff')
-  .setTitle(`🎮 ${player} ищет тиммейта в игру ${game}!`)
+  .setTitle(`🎮 ${player.username} ищет тиммейта в игру ${game}!`)
   .setDescription('Если ты согласен, напиши ему в личные сообщения.')
   .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
   let ideachannel = message.guild.channels.find('name', '⌈🎮⌋┊тиммейты')
