@@ -1,12 +1,12 @@
 exports.run = (bot, message, args) => {
     const Discord = require('discord.js')
     const fs = require('fs')
-    if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply("у вас недостаточно прав!")
+    if (!message.member.hasPermission("BAN_MEMBERS")) return bot.send("<:xmark:651075973378211847> У вас недостаточно прав!")
     let warnmember = message.mentions.users.first()
     let moder = message.author
     let warnreason = args.slice(1).join(' ')
-    if (!warnmember) return message.reply("пожайлуста, укажите пользователя")
-    if (!warnreason) return message.reply("пожайлуста, укажите причину бана")
+    if (!warnmember) return bot.send("<:xmark:651075973378211847> Пожайлуста, укажите пользователя")
+    if (!warnreason) return bot.send("<:xmark:651075973378211847> Пожайлуста, укажите причину бана")
     var banRole = message.guild.roles.find('name', 'BANNED')
     var dj = message.guild.roles.find('name', 'DJ 🎧')
     var piar = message.guild.roles.find('name', '💬┊Пиарщик')
@@ -25,7 +25,7 @@ exports.run = (bot, message, args) => {
         .setTitle('Выдан бан!')
         .addField('Подробнее...',`**Модератор:** ${moder}\n**Нарушитель:** ${warnmember}\n**Причина:** ${warnreason}`)
         let rpchannel = message.guild.channels.find('name', '⌈📰⌋┊логи')
-if(!rpchannel) return message.channel.send("Не удалось найти канал для отчетов");
+if(!rpchannel) return message.channel.send("<:xmark:651075973378211847> Не удалось найти канал для отчетов");
 rpchannel.send(embed)
     message.guild.member(warnmember).removeRole(dj)
     message.guild.member(warnmember).removeRole(piar)
