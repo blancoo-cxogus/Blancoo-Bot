@@ -29,7 +29,6 @@ if (member.user.bot === true) {
                 .addField("Бот?", `${bot}`,inline, true)
                 .addField("Статус", `${status[member.user.presence.status]}`, inline, true)
                 .addField("Игры", `${member.user.presence.game ? `<:XP:651075973428805632>┊${member.user.presence.game.name}` : "<:xmark:651075973378211847>┊Не играет"}`,inline, true)
-                .addField("Роли", `${member.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "<:xmark:651075973378211847>┊Нет ролей"}`, true)
                 .addField("Создание аккаунта", member.user.createdAt)
                 .setTimestamp()
     
