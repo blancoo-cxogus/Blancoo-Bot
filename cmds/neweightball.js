@@ -12,6 +12,7 @@ module.exports.run = (bot, message, args) => {
     if(question === "Где смотреть аниме?") replies[result] = 'Только на youmiteru.ru!\n **ПАСХАЛКА**' 
     if(question === "8ball?") replies[result] = '???????\n **ПАСХАЛКА**'
     if(question === "Ты пидор?") replies[result] = '...\n **ПАСХАЛКА**'
+    if(question === "Ты живешь в Москве?") replies[result] = 'Нет, но за то у меня есть чупа-чупс с вкусом квартиры в Москве\n **ПАСХАЛКА**'
     if(question === "Ты захватил мир?") replies[result] = 'Пока что, я думаю, нет\n **ПАСХАЛКА**'
     if(question === "К 2020 ты захватишь мир?") replies[result] = 'Не хочу, чтобы ты знал.\n **ПАСХАЛКА**'
     if(question === "Когда будет война?") replies[result] = 'В 2020 году\n **ПАСХАЛКА**'
