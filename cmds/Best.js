@@ -8,6 +8,8 @@ module.exports.run = async (bot,message,args) => {
       .setTitle(user.username)
       .setDescription(usern)
       .setThumbnail(`${user.displayAvatarURL}`)
+    if (!user) return bot.send('<:xmark:651075973378211847> Укажите пользователя!')
+    if (!usern) return bot.send('<:xmark:651075973378211847> Укажите сообщение!')
     message.channel.send(dmresult)
     message.delete()
 };
