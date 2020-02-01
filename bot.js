@@ -50,7 +50,7 @@ bot.channels.get('652752979979403275').setName(`🕥 ${vremya_po_msk('%H:%M', ne
                     if(err) console.log(err);
                 });
             }
-        
+        }
 
     },5000)
 
