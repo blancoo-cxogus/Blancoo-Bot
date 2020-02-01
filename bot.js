@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 const fs = require('fs');
 bot.mutes = require('./mutes.json');
- config = require('./botconfig.json');
+let config = require('./botconfig.json');
 bot.login(process.env.BOT_TOKEN)
 let prefix = config.prefix;
 let profile = require('./profile.json');
@@ -20,7 +20,7 @@ fs.readdir('./cmds/',(err,files)=>{
 });
 
 
-bot.on('ready', () => {
+bot.on('read', () => {
 let status = [',help | Blancoo', ',help | Blancoo']
 let status_res = Math.floor(Math.random() * status.length)
 setInterval(() => {
