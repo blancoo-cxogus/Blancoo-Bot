@@ -20,7 +20,7 @@ fs.readdir('./cmds/',(err,files)=>{
 });
 
 
-bot.on('read', () => {
+bot.on('ready', () => {
 let status = [',help | Blancoo', ',help | Blancoo']
 let status_res = Math.floor(Math.random() * status.length)
 setInterval(() => {
@@ -50,7 +50,7 @@ bot.channels.get('652752979979403275').setName(`🕥 ${vremya_po_msk('%H:%M', ne
                     if(err) console.log(err);
                 });
             }
-        }
+        
 
     },5000)
 
