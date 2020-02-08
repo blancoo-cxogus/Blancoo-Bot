@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
-    if (!message.member.hasPermission("ADMINISTATOR")) return message.reply(twarn)
     let twarn = new Discord.RichEmbed()
     .setColor('#00ffff')
-    .setTitle('Недостаточно прав!')
+    .setTitle('Ты конечно молодец, что нашел секретную команду, но недостаточно прав!')
+    if (!message.member.hasPermission("ADMINISTATOR")) return message.reply(twarn)
     let tfwarn = new Discord.RichEmbed()
     .setColor('#00ffff')
     .setTitle('Укажи текст сообщения!')
