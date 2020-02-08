@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 function randomIntInc(low, high) {
     return Math.floor(Math.random() * (high - low + 1) + low);
 }
-let meme = randomIntInc(1, 7)
+let meme = randomIntInc(1, 15)
 let embed = new Discord.RichEmbed()
 .setTitle('Мем | Чтобы получить еще, напишите команду `,meme`')
 .setColor("#00ffff")
@@ -28,6 +28,30 @@ if(meme === 6){
 }
 if(meme === 7){
   embed.setImage('https://cdn.discordapp.com/attachments/488901948037398539/570330146674966542/vjjuhh-1058990.jpg')
+}
+if(meme === 8){
+  embed.setImage('https://memepedia.ru/wp-content/uploads/2019/12/vrach-i-durka-mem-5.jpg')
+}
+if(meme === 9){
+  embed.setImage('https://memepedia.ru/wp-content/uploads/2019/12/vrach-i-durka-mem-11-360x270.jpg')
+}
+if(meme === 10){
+  embed.setImage('https://antislang.ru/wp-content/uploads/%D0%B4%D1%83%D1%80%D0%BA%D0%B0-4.jpg')
+}
+if(meme === 11){
+  embed.setImage('https://cdn.discordapp.com/attachments/633671705612648508/673531785879224380/Screenshot_13.png')
+}
+if(meme === 12){
+  embed.setImage('https://cdn.discordapp.com/attachments/633671705612648508/673531317379530775/IMG-20200202-WA0000.jpg')
+}
+if(meme === 13){
+  embed.setImage('https://cdn.discordapp.com/attachments/633671705612648508/673531316779614248/IMG_20200201_211201_314.jpg')
+}
+if(meme === 14){
+  embed.setImage('https://cdn.discordapp.com/attachments/633671705612648508/673531316515635200/unknown-29.png')
+}
+if(meme === 15){
+  embed.setImage('https://cdn.discordapp.com/attachments/649611799213375498/675421979926593557/IMG_20200207_184204.jpg')
 }
 message.channel.send(embed);}
 
