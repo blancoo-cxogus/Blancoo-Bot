@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 function randomIntInc(low, high) {
     return Math.floor(Math.random() * (high - low + 1) + low);
 }
-let meme = randomIntInc(1, 2)
+let meme = randomIntInc(1, 7)
 let embed = new Discord.RichEmbed()
 .setTitle('Мем | Чтобы получить еще, напишите команду `,meme`')
 .setColor("#00ffff")
