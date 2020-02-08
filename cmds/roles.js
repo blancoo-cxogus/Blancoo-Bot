@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor('#00ffff')
     .setTitle('Навигация по серверу')
     .setDescription(content)
-    .setThumbnail('https://img1.freepng.ru/20180421/hqq/kisspng-airplane-paper-plane-computer-icons-paper-airplane-5adbfef2636298.7674239715243670904071.jpg')
+    .setThumbnail('https://img1.freepng.ru/20180605/aif/kisspng-airplane-paper-plane-computer-icons-paper-plan-5b166971e4b0f8.2654792615281954419367.jpg')
     if (!content) return message.reply(tfwarn)
     await message.delete()
     await message.channel.send(result)
