@@ -42,8 +42,10 @@ if(meme === 16){
 if(meme === 17){
   embed.setImage('https://cdn.discordapp.com/attachments/549218016215433216/568809408373456897/CueHNTi2Q-o.jpg')}
 if(meme === 18){
-  embed.setImage('https://sun9-21.userapi.com/c850324/v850324811/9bf07/7wVLXKLtepY.jpg')}
-message.channel.send(embed);}
+  embed.setImage('https://sun9-21.userapi.com/c850324/v850324811/9bf07/7wVLXKLtepY.jpg')
+}
+message.channel.send(embed);
+}
 exports.help = {
   name: "meme"
 }
