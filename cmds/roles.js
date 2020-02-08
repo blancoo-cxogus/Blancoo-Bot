@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor('#00ffff')
     .setTitle('Техническое')
     .setDescription(content)
-    .setThumbnail('https://emojio.ru/images/apple-b/1f6e0.png')
+    .setThumbnail('https://image.flaticon.com/icons/png/512/104/104949.png')
     if (!content) return message.reply(tfwarn)
     await message.delete()
     await message.channel.send(result)
