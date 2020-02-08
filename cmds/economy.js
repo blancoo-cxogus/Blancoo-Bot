@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor('#00ffff')
     .setTitle('Наш сервер')
     .setDescription(`<:Discord:651075751386546187> **__Blancoo Gamers__** - ${content}`)
+    .setThumbnail('https://cdn.discordapp.com/icons/617301670166003723/a_c7cd2ab2429402a8733c285d8e7b7180.gif?size=128')
     if (!content) return message.reply(tfwarn)
     await message.delete()
     await message.channel.send(result)
