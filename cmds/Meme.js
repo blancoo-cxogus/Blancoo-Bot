@@ -1,4 +1,3 @@
-  
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
  function randomIntInc(low, high) {
@@ -62,7 +61,6 @@ module.exports.run = async (bot, message, args) => {
  }
  message.channel.send(embed)
 };
-
 module.exports.help = {
     name: "meme"
 }
