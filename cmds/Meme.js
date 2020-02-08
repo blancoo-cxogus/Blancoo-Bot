@@ -63,6 +63,6 @@ if(meme === 18){
 message.channel.send(embed)
 }
 
-exports.help = {
-  name: "meme"
+module.exports.help = {
+    name: 'meme'
 }
