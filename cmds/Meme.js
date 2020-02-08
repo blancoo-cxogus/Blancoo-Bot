@@ -64,5 +64,5 @@ message.channel.send(embed)
 };
 
 module.exports.help = {
-    name: 'meme'
+    name: "meme"
 }
