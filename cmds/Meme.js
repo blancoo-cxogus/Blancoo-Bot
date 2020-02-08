@@ -50,6 +50,7 @@ module.exports.run = async (bot, message, args) => {
  }
  if(meme === 15){
    embed.setImage('https://cdn.discordapp.com/attachments/649611799213375498/675421979926593557/IMG_20200207_184204.jpg')
+ }
  if(meme === 16){
    embed.setImage('https://cdn.discordapp.com/attachments/488901948037398539/567582682570162186/gPsggusqgAQ.png')
  }
