@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     let result = new Discord.RichEmbed()
     .setColor('#00ffff')
     .setTitle('Наш сервер')
-    .setDescription(`<:Discord:651075751386546187> `Blancoo Gamers` - ${content}`)
+    .setDescription(`<:Discord:651075751386546187> ``Blancoo Gamers`` - ${content}`)
     if (!content) return message.reply(tfwarn)
     await message.delete()
     await message.channel.send(result)
