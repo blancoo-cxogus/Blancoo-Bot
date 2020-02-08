@@ -61,7 +61,7 @@ if(meme === 18){
   embed.setImage('https://sun9-21.userapi.com/c850324/v850324811/9bf07/7wVLXKLtepY.jpg')
 }
 message.channel.send(embed)
-}
+};
 
 module.exports.help = {
     name: 'meme'
