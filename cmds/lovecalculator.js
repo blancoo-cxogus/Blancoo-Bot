@@ -17,7 +17,9 @@ if(c === 0) {
 if(c === 100){
   embed.setDescription(`${a} любит ${b} всей душой`)
 }
-
+if(a === b){
+  embed.setDescription(`${a} любит себя на ${c}%`)    
+}
 message.channel.send(embed);}
 
 exports.help = {
