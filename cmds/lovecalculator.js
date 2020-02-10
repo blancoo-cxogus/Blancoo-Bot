@@ -6,16 +6,20 @@ function randomIntInc(low, high) {
 let a = message.mentions.users.first()
 let b = message.author
 let c = randomIntInc(0, 100)
-let d = randomIntInc(0, 100)
 let embed = new Discord.RichEmbed()
 .setTitle('Калькулятор любви')
-.setDescription(`${a.username} любит ${b.username} на ${c}%`)
+.setDescription(`${a} любит ${b} на ${c}%`)
 .setColor("#00ffff")
 .setThumbnail('https://pngimg.com/uploads/heart/heart_PNG51337.png')
+if(c === 0) {
+  embed.setDescription(`${a} не любит ${b}`)
+}
+if(c === 100){
+  embed.setDescription(`${a} любит ${b} всей душой`)
+}
 
 message.channel.send(embed);}
 
 exports.help = {
     name:"lovecalc"
-
 }
