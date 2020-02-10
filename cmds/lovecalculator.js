@@ -9,7 +9,7 @@ let c = randomIntInc(0, 100)
 let d = randomIntInc(0, 100)
 let embed = new Discord.RichEmbed()
 .setTitle('Калькулятор любви')
-.setDescription(`${a} любит ${b} на ${c}`)
+.setDescription(`${a.username} любит ${b.username} на ${c}%`)
 .setColor("#00ffff")
 .setThumbnail('https://pngimg.com/uploads/heart/heart_PNG51337.png')
 
