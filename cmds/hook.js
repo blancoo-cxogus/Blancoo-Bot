@@ -7,6 +7,7 @@ let user = message.author
 const msg = new webhook.MessageBuilder()
                 .setName(user.username) // Название вебхука, если нету то по дефолту стоит
                 .setText(messagehook) // Текст вне embed текста, или внутри, я не помню.
+                .avatarURL(`${user.displayAvatarURL}?size=2048`)
  
 Hook.send(msg);} // Отправить вебхук
 module.exports.help = {
