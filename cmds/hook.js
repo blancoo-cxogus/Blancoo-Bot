@@ -5,11 +5,10 @@ let messagehook = args.slice(0).join(' ')
 const Hook = new webhook.Webhook("https://discordapp.com/api/webhooks/684008202635051052/kjFunNILxRPZ42b0-U-LPtww681g5wBirgq0PnpTYIWemmR9EMRTRslCFPH5fdpDpzXv"); // Прямая ссылка на вЕбхук
 let user = message.author
 const msg = new webhook.MessageBuilder()
-                .setName(user.username) // Название вебхука, если нету то по дефолту стоит
-                .setText(messagehook) // Текст вне embed текста, или внутри, я не помню.
-                Hook.avatarURL(`${user.displayAvatarURL}?size=2048`)
+                .setName(user.username)
+                .setText(messagehook)
  
-Hook.send(msg);} // Отправить вебхук
+Hook.send(msg);} 
 module.exports.help = {
    name: "webhook"
 }
