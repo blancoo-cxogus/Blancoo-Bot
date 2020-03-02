@@ -4,11 +4,8 @@ module.exports.run = async (bot, message, args) => {
 const Hook = new webhook.Webhook("url"); // Прямая ссылка на вЕбхук
  
 const msg = new webhook.MessageBuilder()
-                .setName("Name") // Название вебхука, если нету то по дефолту стоит
-                .setColor("#00ff00") // Цвет embed, логично, лол
-                .setText("1") // Текст вне embed текста, или внутри, я не помню.
-                .addField("2", "3") // embed текст(Пинг не робит в нём)
-                .addField("4", "5")
+                .setName("Я крутой") // Название вебхука, если нету то по дефолту стоит
+                .setText("Класс") // Текст вне embed текста, или внутри, я не помню.
                 .setTime();
  
 Hook.send(msg);} // Отправить вебхук
