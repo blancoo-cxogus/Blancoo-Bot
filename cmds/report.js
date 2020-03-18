@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("📢Канал", message.channel)
     .addField("📄Причина", rreason)
         message.channel.send(`<a:YesGif:651075988490551307> Совсем скоро администрация нашего сервера, рассмотрит жалобу на ${rUser.user.tag}`)
-let rpchannel = message.guild.channels.find('name', '⌈📰⌋┊логи')
+let rpchannel = message.guild.channels.find('name', '┃⌈📰⌋┊логи')
 if(!rpchannel) return message.channel.send("Не удалось найти канал для отчетов");
 rpchannel.send(embed)
 
