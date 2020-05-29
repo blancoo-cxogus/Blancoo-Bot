@@ -15,7 +15,7 @@ module.exports.run = async (bot,message,args) => {
         .addField('Подробнее...',`**Модератор:** ${moder}\n**Нарушитель:** ${warnmember}\n**Причина:** ${warnreason}`)
     if (!warnmember) return bot.send("<:xmark:651075973378211847> Пожайлуста, укажите пользователя")
     if (!warnreason) return bot.send("<:xmark:651075973378211847> Пожайлуста, укажите причину")
-    let rpchannel = message.guild.channels.find('name', '⌈📰⌋┊логи')
+    let rpchannel = message.guild.channels.find('name', 'админ')
 if(!rpchannel) return bot.send("<:xmark:651075973378211847> Не удалось найти логи");
 rpchannel.send(warnokaymsg)
     warnmember.send(warnresult)
