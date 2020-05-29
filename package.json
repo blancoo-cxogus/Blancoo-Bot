@@ -12,7 +12,7 @@
     "timezone-support": "^2.0.2",
     "translate": "^1.1.0",
     "webhook-discord": "^3.5.1",
-    "pangocairo.pc": "^1.2.5"
+    "pangocairo": "^1.2.5"
   },
   "devDependencies": {},
   "scripts": {
