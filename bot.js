@@ -28,7 +28,7 @@ bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
     const strftime = require('strftime'); // Без него тут никак xd
 const vremya_po_msk = strftime.timezone(180);
 setInterval(function() {
-bot.channels.get('652752979979403275').setName(`🕥 ${vremya_po_msk('%H:%M', new Date())} по МСК`);
+bot.channels.get('715918544650371072').setName(`🕥 ${vremya_po_msk('%H:%M', new Date())} по МСК`);
 }, 60000);
     console.log(`Запустился бот ${bot.user.username}`);
     bot.generateInvite(["ADMINISTRATOR"]).then(link =>{
@@ -72,7 +72,7 @@ bot.on('message', msg => {
   }});
       
 bot.on('guildMemberAdd', member => { 
-    var channel = member.guild.channels.get('649611799213375498')
+    var channel = member.guild.channels.get('715907162689372217')
     let welcome = new Discord.RichEmbed()
         .setColor('#00ffff')
         .setTitle('Добро пожаловать!')
@@ -120,8 +120,8 @@ bot.on('message', async message => {
     bot.uId = message.author.id;
 });
 
-var categoryID = '617301670661193729';
-var voiceID = '640066442401677312';
+var categoryID = '715907162689372216';
+var voiceID = '715907162689372218';
 
 bot.on('voiceStateUpdate',(Old,New)=>{
     if(New.user.bot) return;
