@@ -25,11 +25,7 @@ let status = [',help | Blancoo', ',help | Blancoo']
 let status_res = Math.floor(Math.random() * status.length)
 setInterval(() => {
 bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
-    const strftime = require('strftime'); // Без него тут никак xd
-const vremya_po_msk = strftime.timezone(180);
-setInterval(function() {
-bot.channels.get('715918544650371072').setName(`🕥 ${vremya_po_msk('%H:%M', new Date())} по МСК`);
-}, 60000);
+
     console.log(`Запустился бот ${bot.user.username}`);
     bot.generateInvite(["ADMINISTRATOR"]).then(link =>{
         console.log(link);
