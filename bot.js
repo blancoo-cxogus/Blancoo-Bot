@@ -118,48 +118,30 @@ bot.on('message', async message => {
 
 
 
-bot.on('voiceStateUpdate',(Old,New)=>{
-    if(New.user.bot) return;
-    if(Old.user.bot) return;
-    
-var categoryID = '715907162689372216';
-var voiceID = '715907162689372218';
-
-    if(New.voiceChannelID == voiceID)
-    {
-            New.guild.createChannel(`⭐ ${New.user.username}`).then(set=>
+const configcomnata = {
+  voice: "715907162689372218",
+  parent: "715907162689372216"
+}
+//Вместо инстансов GuildMember, используются инстансы VoiceState, что равносильно member.voice
+bot.on("voiceStateUpdate", (oldState, newState) => {
+  if(!oldState.guild.channels.cache.has(configcomnata.voice) || !oldState.guild.channels.cache.has(configcomnata.voice)) throw Error("Не указано либо айди канала, либо айди категории")
+  if(newState.channelID === configcomnata.voice) {
+    newState.guild.channels.create("Имя привата", {
+      type: "VOICE",
+      parent: configcomnata.parent,
+      permissionOverwrites: [
         {
-            New.setVoiceChannel(New.guild.channels.get(set.id)).then(()=>
-            {
-                set.setParent(New.guild.channels.get(categoryID));
-            });
-            set.overwritePermissions(New.user,
-                {
-                    'CONNECT':true,'SPEAK':true,
-                    'MOVE_MEMBERS':false,'VIEW_CHANNEL':true,
-                    'MANAGE_CHANNELS':true,'MANAGE_ROLES_OR_PERMISSIONS':false,
-                    'USE_VAD':true,'PRIORITY_SPEAKER':true
-                });
-        });
-    }
-
-
-    if(Old.voiceChannel)
-    {
-        Old.guild.channels.forEach(channels=>
-            {
-                if(channels.parentID == categoryID)
-                {
-                    if(channels.id == voiceID) return;
-                    if(Old.voiceChannelID == channels.id)
-                    {
-                        if(Old.voiceChannel.members.size == 0)
-                        {
-                            channels.delete();
-                        }
-                    }
-                }
-            });
-    }
-});
+           id: newState.guild.id, //Права для роли @everyone
+           allow: ["VIEW_CHANNEL"]
+        },
+        {
+          id: newState.member.id, //Права для создателя канала
+          allow: ["VIEW_CHANNEL", "MANAGE_CHANNELS"]
+        }
+      ]
+    }).then(ch => newState.setChannel(ch))
+  }
+  //удаление канала, если в нем больше не осталось человек
+  if(oldState.channel && !oldState.channel.members.size && oldState.channel.parentID === configcomnata.parent && oldState.channelID !== configcomnata.voice) oldState.channel.delete();
+})
 bot.login(process.env.BOT_TOKEN)
