@@ -124,7 +124,6 @@ const configcomnata = {
 }
 //Вместо инстансов GuildMember, используются инстансы VoiceState, что равносильно member.voice
 bot.on("voiceStateUpdate", (oldState, newState) => {
-  if(!oldState.guild.channels.cache.has(configcomnata.voice) || !oldState.guild.channels.cache.has(configcomnata.voice)) throw Error("Не указано либо айди канала, либо айди категории")
   if(newState.channelID === configcomnata.voice) {
     newState.guild.channels.create("Имя привата", {
       type: "VOICE",
