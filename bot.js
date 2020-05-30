@@ -116,12 +116,14 @@ bot.on('message', async message => {
     bot.uId = message.author.id;
 });
 
-var categoryID = '715907162689372216';
-var voiceID = '715907162689372218';
+
 
 bot.on('voiceStateUpdate',(Old,New)=>{
     if(New.user.bot) return;
     if(Old.user.bot) return;
+    
+var categoryID = '715907162689372216';
+var voiceID = '715907162689372218';
 
     if(New.voiceChannelID == voiceID)
     {
