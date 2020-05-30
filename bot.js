@@ -125,7 +125,7 @@ bot.on('voiceStateUpdate',(Old,New)=>{
 
     if(New.voiceChannelID == voiceID)
     {
-            New.guild.createChannel(`⭐ ${New.user.tag}`).then(set=>
+            New.guild.createChannel(`⭐ ${New.user.username}`).then(set=>
         {
             New.setVoiceChannel(New.guild.channels.get(set.id)).then(()=>
             {
