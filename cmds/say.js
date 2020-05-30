@@ -11,7 +11,6 @@ module.exports.run = async (bot, message, args) => {
     let result = new Discord.RichEmbed()
     .setColor('#00ffff')
     .setTitle(`${content}`)
-    .setThumbnail('https://cdn.discordapp.com/attachments/715913918219812926/716186792402878485/198-1982661_rules-icon-png-white.png')
     if (!content) return message.reply(tfwarn)
     await message.delete()
     await message.channel.send(result)
