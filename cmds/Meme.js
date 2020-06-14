@@ -64,7 +64,7 @@ module.exports.run = async (bot, message, args) => {
    embed.setImage('https://cdn.discordapp.com/attachments/684434042493730846/684434062831648807/unknown.png')
  }
  if(meme === 20){
-   embed.setImage('https://cdn.discordapp.com/attachments/609073992833433620/716533335555571802/mfl4mc86iw151.png)
+   embed.setImage('https://cdn.discordapp.com/attachments/609073992833433620/716533335555571802/mfl4mc86iw151.png')
  }
  message.channel.send(embed)
 };
