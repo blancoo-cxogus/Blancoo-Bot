@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
    embed.setImage('https://cdn.discordapp.com/attachments/529016532232044556/531193781727264768/unknown.png')
  }
  if(meme === 7){
-   embed.setImage('https://cdn.discordapp.com/attachments/488901948037398539/570330146674966542/vjjuhh-1058990.jpg');
+   embed.setImage('https://cdn.discordapp.com/attachments/488901948037398539/570330146674966542/vjjuhh-1058990.jpg')
  }
  if(meme === 8){
    embed.setImage('https://memepedia.ru/wp-content/uploads/2019/12/vrach-i-durka-mem-5.jpg')
