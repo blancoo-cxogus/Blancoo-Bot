@@ -11,6 +11,6 @@ let a = penis(b)
 message.channel.send(a)}
 
 exports.help = {
-    name:"iq"
+    name:"penis"
 
 }
