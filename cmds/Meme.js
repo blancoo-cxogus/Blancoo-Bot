@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
  function randomIntInc(low, high) {
      return Math.floor(Math.random() * (high - low + 1) + low);}
- let meme = args.slice(0).join(' ') || randomIntInc(1, 23)
+ let meme = randomIntInc(1, 23)
  let embed = new Discord.RichEmbed()
  .setTitle('Мем | Чтобы получить еще, напишите команду `,meme`')
  .setColor("#00ffff")
