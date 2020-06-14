@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
  function randomIntInc(low, high) {
      return Math.floor(Math.random() * (high - low + 1) + low);}
- let meme = randomIntInc(1, 20)
+ let meme = randomIntInc(1, 21)
  let embed = new Discord.RichEmbed()
  .setTitle('Мем | Чтобы получить еще, напишите команду `,meme`')
  .setColor("#00ffff")
@@ -65,6 +65,9 @@ module.exports.run = async (bot, message, args) => {
  }
  if(meme === 20){
    embed.setImage('https://cdn.discordapp.com/attachments/609073992833433620/716533335555571802/mfl4mc86iw151.png')
+ }
+ if(meme === 21){
+   embed.setImage('https://cdn.discordapp.com/attachments/721610983801487370/721617997352927325/2.jpg')
  }
  message.channel.send(embed)
 };
