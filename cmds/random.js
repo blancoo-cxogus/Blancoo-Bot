@@ -3,7 +3,7 @@ exports.run = (bot, message, args) =>
 {
     var result = Math.floor(Math.random() * 1000)
     var random = new Discord.RichEmbed()
-    .setColor('#FFFF00')
+    .setColor('#FFFF14')
     .setDescription(`${result}`)
     message.channel.send(random)
 }
