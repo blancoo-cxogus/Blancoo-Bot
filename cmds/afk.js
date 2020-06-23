@@ -4,7 +4,7 @@ module.exports.run = async (bot,message,args) => {
     let bus = message.author
     message.delete().catch();
     let lalla = new Discord.RichEmbed()
-     .setColor('#00ffff')
+     .setColor('#00ff14')
      .setDescription(`${bus} ушел в АФК`)
     message.channel.send(lalla)
 }
