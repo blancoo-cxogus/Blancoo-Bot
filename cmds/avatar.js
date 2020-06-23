@@ -5,7 +5,7 @@ module.exports.run = (bot, msg, args) => {
 
   msg.channel.send(
     new RichEmbed()
-      .setColor('00ffff')
+      .setColor('00ff14')
       .setDescription(user.tag)
       .setImage(`${user.displayAvatarURL}?size=2048`)
   );
