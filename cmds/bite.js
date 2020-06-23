@@ -9,7 +9,7 @@ module.exports.run = async (bot,message,args) => {
     let buss = message.author
     message.delete().catch();
     let lallas = new Discord.RichEmbed()
-     .setColor('#00ffff')
+     .setColor('#00ff14')
      .setDescription(`${buss} укусил ${uss}, ${ress}`)
     if(!uss) return bot.send('<:xmark:651075973378211847> Пожайлуста, укажите пользователя')
     if(uss === buss) {
