@@ -4,7 +4,7 @@ module.exports.run = async (bot,message,args) => {
     let buss = message.author
     message.delete().catch();
     let lallas = new Discord.RichEmbed()
-     .setColor('#00ffff')
+     .setColor('#00ff14')
      .setDescription(`${buss} подмигнул`)
     message.channel.send(lallas)
 }
