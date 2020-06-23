@@ -21,7 +21,7 @@ fs.readdir('./cmds/',(err,files)=>{
 
 
 bot.on('ready', () => {
-let status = [',help | Blancoo', ',help | Blancoo']
+let status = [',help | It`s Map', ',help | It`s Map!']
 let status_res = Math.floor(Math.random() * status.length)
 setInterval(() => {
 bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
@@ -51,24 +51,10 @@ bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
     },5000)
 
 });
-let levelslink = new Discord.RichEmbed()
-   .setColor('#00ffff')
-   .setDescription('Топ по уровням на нашем сервере: https://mee6.xyz/leaderboard/617301670166003723\nЧтобы посмотреть свой уровень напишите команду: ``!rank``')
-bot.on('message', msg => {
-  if (msg.content === '!levels') {
-    msg.channel.send(levelslink);
-  }});
 
-let renklink = new Discord.RichEmbed()
-   .setColor('#00ffff')
-   .setDescription('На картинке показан твой уровень. Твой уровень прокачивается в зависимости от того сколько ты общаешься на сервере. За уровень можно получать роли. Чтобы посмотреть топ по уровням пропиши ``!levels``')
-bot.on('message', msg => {
-  if (msg.content === '!rank') {
-    msg.channel.send(renklink);
-  }});
       
 bot.on('guildMemberAdd', member => { 
-    var channel = member.guild.channels.get('715907162689372217')
+    var channel = member.guild.channels.get('724901156148740189')
     let welcome = new Discord.RichEmbed()
         .setColor('#00ffff')
         .setTitle('Добро пожаловать!')
@@ -115,32 +101,4 @@ bot.on('message', async message => {
     bot.rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     bot.uId = message.author.id;
 });
-
-
-
-const configcomnata = {
-  voice: "715907162689372218",
-  parent: "715907162689372216"
-}
-//Вместо инстансов GuildMember, используются инстансы VoiceState, что равносильно member.voice
-bot.on("voiceStateUpdate", (oldState, newState) => {
-  if(newState.channelID === configcomnata.voice) {
-    newState.guild.channels.create("Имя привата", {
-      type: "VOICE",
-      parent: configcomnata.parent,
-      permissionOverwrites: [
-        {
-           id: newState.guild.id, //Права для роли @everyone
-           allow: ["VIEW_CHANNEL"]
-        },
-        {
-          id: newState.member.id, //Права для создателя канала
-          allow: ["VIEW_CHANNEL", "MANAGE_CHANNELS"]
-        }
-      ]
-    }).then(ch => newState.setChannel(ch))
-  }
-  //удаление канала, если в нем больше не осталось человек
-  if(oldState.channel && !oldState.channel.members.size && oldState.channel.parentID === configcomnata.parent && oldState.channelID !== configcomnata.voice) oldState.channel.delete();
-})
 bot.login(process.env.BOT_TOKEN)
