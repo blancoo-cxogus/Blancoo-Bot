@@ -7,7 +7,7 @@ let user = message.mentions.users.first() || message.author;
 let a = randomIntInc(0, 160)
 let embed = new Discord.RichEmbed()
 .addField(":jigsaw: IQ ТЕСТ :jigsaw:", `У ${user.username} ${a} IQ`)
-.setColor("#00ffff")
+.setColor("#00ff14")
 .setThumbnail(user.displayAvatarURL)
 
 message.channel.send(embed);}
