@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
  let meme = randomIntInc(1, 23)
  let embed = new Discord.RichEmbed()
  .setTitle('Мем | Чтобы получить еще, напишите команду `,meme`')
- .setColor("#00ffff")
+ .setColor("#00ff14")
  if(meme === 1){
    embed.setImage('https://cdn.discordapp.com/attachments/644178585472729104/675328674656026656/unknown.png')
  }
