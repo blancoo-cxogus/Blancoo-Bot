@@ -9,7 +9,7 @@ const Discord = require('discord.js')
   let botmessage = args.join(" ");
   message.delete().catch();
   let botreplyi = new Discord.RichEmbed()
-  .setColor('#00ffff')
+  .setColor('#00ff14')
   .setTitle(`${botmessage}`)
   .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
     if (!args[0]) return message.reply(noq);
