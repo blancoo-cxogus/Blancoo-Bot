@@ -52,15 +52,7 @@ bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
 
 });
 
-      
-bot.on('guildMemberAdd', member => { 
-    var channel = member.guild.channels.get('724901156148740189')
-    let welcome = new Discord.RichEmbed()
-        .setColor('#00ffff')
-        .setTitle('Добро пожаловать!')
-        .setDescription(`На наш сервер зашел ${member}!`)
-    channel.send(welcome)
-})
+    
 
 bot.on('message', async message => {
     if(message.author.bot) return;
