@@ -21,7 +21,7 @@ fs.readdir('./cmds/',(err,files)=>{
 
 
 bot.on('ready', () => {
-let status = [',help | It`s Map', ',help | It`s Map!']
+let status = [',help', ',help']
 let status_res = Math.floor(Math.random() * status.length)
 setInterval(() => {
 bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
