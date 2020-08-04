@@ -18,5 +18,5 @@ module.exports.run = async (bot,message,args) => {
     message.channel.send(lallas)
 }
 exports.help = {
-    name: "bite"
+    name: "objection"
 }
