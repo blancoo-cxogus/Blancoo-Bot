@@ -12,7 +12,7 @@ module.exports.run = (bot, message, args) => {
     if(question === "Когда я найду свою любовь?") replies[result] = 'С такими глупыми занятиями как втыкать в экран - никогда.\n **ПАСХАЛКА**'
     let e = new Discord.RichEmbed()
         .setAuthor(message.author.tag)
-        .setColor("#FF9900")
+        .setColor('#ffffff')
         .addField("Вопрос:", question)
         .addField("Ответ:", replies[result]);
 
