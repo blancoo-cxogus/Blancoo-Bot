@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let choose =
     ['Ребро', 'Орел', 'Решка'].random()
     let result = new Discord.RichEmbed()
-    .setColor('#fff014')
+    .setColor('#ffffff')
     .setTitle('Монетка')
     .setDescription(`Вам выпал(а) ${choose}\n **Лузер!**`)
     .setThumbnail('http://pngimg.com/uploads/coin/coin_PNG36943.png')
