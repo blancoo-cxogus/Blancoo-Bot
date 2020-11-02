@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle('Укажи текст сообщения!')
     let content = args.slice(0).join(' ')
     let result = new Discord.RichEmbed()
-    .setColor('#000000')
+    .setColor('#ffffff')
     .setDescription(`${content}`)
     if (!content) return message.reply(tfwarn)
     await message.delete()
