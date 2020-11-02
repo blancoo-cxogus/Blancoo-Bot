@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle('Укажи текст сообщения!')
     let content = args.slice(0).join(' ')
     let result = new Discord.RichEmbed()
-    .setColor('#00ff14')
+    .setColor('#ffffff')
     .setTitle(':bar_chart: Опрос')
     .setDescription(content)
     .setThumbnail('https://www.onlinecharts.ru/pics/logo.png')
