@@ -9,7 +9,7 @@ let b = randomIntInc(0, 2)
 let embed = new Discord.RichEmbed()
 .setTitle('Спиннер')
 .setDescription(`Ваш спиннер прокрутился  ${b} минут ${a} секунд.`)
-.setColor("#00ff14")
+.setColor("#ffffff")
 .setThumbnail(user.displayAvatarURL)
 
 message.channel.send(embed);}
