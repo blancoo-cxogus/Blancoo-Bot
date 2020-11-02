@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 module.exports.run = (bot, message, args) => {
-    if (!args[0]) return bot.send("<:xmark:651075973378211847> Вопрос не найден");
+    if (!args[0]) return bot.send("Вопрос не найден");
     let replies = ["Прямо сейчас", "Завтра", "Вчера", "Сейчас не могу дать точного ответа", "Что за тупые вопросы?","Никогда","Скоро","Тебе еще очень долго ждать", "Через месяц", "Через год", "Жди неделю..."];
 
     let result = Math.floor((Math.random() * replies.length));
