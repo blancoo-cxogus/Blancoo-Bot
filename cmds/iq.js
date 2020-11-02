@@ -4,7 +4,7 @@ function randomIntInc(low, high) {
     return Math.floor(Math.random() * (high - low + 1) + low);
 }
 let user = message.mentions.users.first() || message.author;
-let a = randomIntInc(1, 179)
+let a = randomIntInc(1, 194)
 let embed = new Discord.RichEmbed()
 .setDescription(`:jigsaw: IQ ТЕСТ :jigsaw:\nУ ${user.username} ${a} IQ`)
 .setColor("#ffffff")
@@ -65,6 +65,54 @@ let embed = new Discord.RichEmbed()
  }
  if(a === 179){
    embed.setDescription(`:jigsaw: IQ ТЕСТ :jigsaw:\nНе удалось определить IQ пользователя ${user.username}`)
+ }
+ if(a === 180){
+   embed.setDescription(`:no_entry_sign:  ТЕХНИЧЕСКИЕ ШОКОЛАДКИ :no_entry_sign:\nО нет! Кажется на нашем сервере появилсь технические шоколадки...`)
+ }
+ if(a === 181){
+   embed.setDescription(`:no_entry_sign:  ТЕХНИЧЕСКИЕ ШОКОЛАДКИ :no_entry_sign:\nО нет! Кажется на нашем сервере появилсь технические шоколадки...`)
+ }
+ if(a === 182){
+   embed.setDescription(`:no_entry_sign:  ТЕХНИЧЕСКИЕ ШОКОЛАДКИ :no_entry_sign:\nО нет! Кажется на нашем сервере появилсь технические шоколадки...`)
+ }
+ if(a === 183){
+   embed.setDescription(`:no_entry_sign:  ТЕХНИЧЕСКИЕ ШОКОЛАДКИ :no_entry_sign:\nО нет! Кажется на нашем сервере появилсь технические шоколадки...`)
+ }
+ if(a === 184){
+   embed.setDescription(`:no_entry_sign:  ТЕХНИЧЕСКИЕ ШОКОЛАДКИ :no_entry_sign:\nО нет! Кажется на нашем сервере появилсь технические шоколадки...`)
+ }
+ if(a === 184){
+   embed.setDescription(`:cyclone: НЕ УДАЛОСЬ РАССЧИТАТЬ :cyclone:\nВ связи с тем, что вашим разумом кто-то управляет, нам не удалось рассчитать IQ`)
+ }
+ if(a === 185){
+   embed.setDescription(`:cyclone: НЕ УДАЛОСЬ РАССЧИТАТЬ :cyclone:\nВ связи с тем, что вашим разумом кто-то управляет, нам не удалось рассчитать IQ`)
+ }
+ if(a === 186){
+   embed.setDescription(`:cyclone: НЕ УДАЛОСЬ РАССЧИТАТЬ :cyclone:\nВ связи с тем, что вашим разумом кто-то управляет, нам не удалось рассчитать IQ`)
+ }
+ if(a === 187){
+   embed.setDescription(`:cyclone: НЕ УДАЛОСЬ РАССЧИТАТЬ :cyclone:\nВ связи с тем, что вашим разумом кто-то управляет, нам не удалось рассчитать IQ`)
+ }
+ if(a === 188){
+   embed.setDescription(`:cyclone: НЕ УДАЛОСЬ РАССЧИТАТЬ :cyclone:\nВ связи с тем, что вашим разумом кто-то управляет, нам не удалось рассчитать IQ`)
+ }
+ if(a === 189){
+   embed.setDescription(`:cyclone: НЕ УДАЛОСЬ РАССЧИТАТЬ :cyclone:\nВ связи с тем, что вашим разумом кто-то управляет, нам не удалось рассчитать IQ`)
+ }
+ if(a === 190){
+   embed.setDescription(`<:banhammer:748234850518958162> ЗАБАНЬТЕСЬ <:banhammer:748234850518958162>\nВ связи с тем, что бан, вас кит мав.`)
+ }
+ if(a === 191){
+   embed.setDescription(`<:banhammer:748234850518958162> ЗАБАНЬТЕСЬ <:banhammer:748234850518958162>\nВ связи с тем, что бан, вас кит мав.`)
+ }
+ if(a === 192){
+   embed.setDescription(`<:banhammer:748234850518958162> ЗАБАНЬТЕСЬ <:banhammer:748234850518958162>\nВ связи с тем, что бан, вас кит мав.`)
+ }
+ if(a === 193){
+   embed.setDescription(`<:banhammer:748234850518958162> ЗАБАНЬТЕСЬ <:banhammer:748234850518958162>\nВ связи с тем, что бан, вас кит мав.`)
+ }
+ if(a === 194){
+   embed.setDescription(`<:banhammer:748234850518958162> ЗАБАНЬТЕСЬ <:banhammer:748234850518958162>\nВ связи с тем, что бан, вас кит мав.`)
  }
 message.channel.send(embed);}
 
