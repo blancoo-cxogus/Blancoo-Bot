@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args) => {
 
     let result = Math.floor((Math.random() * replies.length));
     let question = args.slice(0).join(" ");
-    if(!question.includes('?')) return bot.send("<:xmark:651075973378211847> Это не вопрос, поставь вопросительный знак")
+    if(!question.includes('?')) return bot.send("Это не вопрос, поставь вопросительный знак")
   
     if(question === "У меня есть смысл жить?") replies[result] = 'Нет, умри нахуй\n **ПАСХАЛКА**'
     if(question === "Где смотреть аниме?") replies[result] = 'Только на youmiteru.ru!\n **ПАСХАЛКА**' 
