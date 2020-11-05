@@ -10,7 +10,8 @@ let embed = new Discord.RichEmbed()
 .setDescription(`${content}`)
 .setColor("#ffffff")
 .setThumbnail(user.displayAvatarURL)
-message.channel.send(embed);}
+await message.delete()
+await message.channel.send(embed);}
 
 exports.help = {
     name:"best"
