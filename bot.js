@@ -52,32 +52,33 @@ bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
 
 });
 
-    
+const voiceconfig = {
+  voice: "724901156148740190",
+  parent: "724901156148740187"
+}
+//Вместо инстансов GuildMember, используются инстансы VoiceState, что равносильно member.voice
+bot.on("voiceStateUpdate", (oldState, newState) => {
+  if(!oldState.guild.channels.cache.has(voiceconfig.voice) || !oldState.guild.channels.cache.has(voiceconfig.voice)) throw Error("Не указано либо айди канала, либо айди категории")
+  if(newState.channelID === voiceconfig.voice) {
+    newState.guild.channels.create("★ ⟆ Приват", {
+      type: "VOICE",
+      parent: voiceconfig.parent,
+      permissionOverwrites: [
+        {
+           id: newState.guild.id, //Права для роли @everyone
+           allow: ["VIEW_CHANNEL"]
+        },
+        {
+          id: newState.member.id, //Права для создателя канала
+          allow: ["VIEW_CHANNEL", "MANAGE_CHANNELS"]
+        }
+      ]
+    }).then(ch => newState.setChannel(ch))
+  }
+  //удаление канала, если в нем больше не осталось человек
+  if(oldState.channel && !oldState.channel.members.size && oldState.channel.parentID === config.parent && oldState.channelID !== config.voice) oldState.channel.delete();
+})
 
-bot.on('message', async message => {
-    if(message.author.bot) return;
-    if(message.channel.type == "dm") return;
-    let uid = message.author.id;
-    bot.send = function (msg){
-        message.channel.send(msg);
-    };
-    if(!profile[uid]){
-        profile[uid] ={
-            coins:10,
-            warns:0,
-            xp:0,
-            lvl:1,
-        };
-    };
-    let u = profile[uid];
-
-    u.coins++;
-    u.xp++;
-
-    if(u.xp>= (u.lvl * 5)){
-        u.xp = 0;
-        u.lvl += 1;
-    };
 
 
     fs.writeFile('./profile.json',JSON.stringify(profile),(err)=>{
