@@ -93,5 +93,4 @@ bot.on("voiceStateUpdate", (oldState, newState) => {
     if(cmd) cmd.run(bot,message,args);
     bot.rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     bot.uId = message.author.id;
-);
 bot.login(process.env.BOT_TOKEN)
