@@ -85,12 +85,5 @@ bot.on("voiceStateUpdate", (oldState, newState) => {
         if(err) console.log(err);
     });
 
-    let messageArray = message.content.split(" ");
-    let command = messageArray[0].toLowerCase();
-    let args = messageArray.slice(1);
-    if(!message.content.startsWith(prefix)) return;
-    let cmd = bot.commands.get(command.slice(prefix.length));
-    if(cmd) cmd.run(bot,message,args);
-    bot.rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    bot.uId = message.author.id;
+
 bot.login(process.env.BOT_TOKEN)
