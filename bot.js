@@ -19,36 +19,13 @@ fs.readdir('./cmds/',(err,files)=>{
     });
 });
 
-bot.on('message', async message => {
-    if(message.author.bot) return;
-    if(message.channel.type == "dm") return;
-    let uid = message.author.id;
-    bot.send = function (msg){
-        message.channel.send(msg);
-    };
-    if(!profile[uid]){
-        profile[uid] ={
-            coins:10,
-            warns:0,
-            xp:0,
-            lvl:1,
-        };
-    };
-    let u = profile[uid];
 
-    u.coins++;
-    u.xp++;
-
-    if(u.xp>= (u.lvl * 5)){
-        u.xp = 0;
-        u.lvl += 1;
-    };
-    
 bot.on('ready', () => {
 let status = [',help', ',help']
 let status_res = Math.floor(Math.random() * status.length)
 setInterval(() => {
 bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
+
     console.log(`Запустился бот ${bot.user.username}`);
     bot.generateInvite(["ADMINISTRATOR"]).then(link =>{
         console.log(link);
@@ -74,6 +51,39 @@ bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
     },5000)
 
 });
+
+    
+
+bot.on('message', async message => {
+    if(message.author.bot) return;
+    if(message.channel.type == "dm") return;
+    let uid = message.author.id;
+    bot.send = function (msg){
+        message.channel.send(msg);
+    };
+    if(!profile[uid]){
+        profile[uid] ={
+            coins:10,
+            warns:0,
+            xp:0,
+            lvl:1,
+        };
+    };
+    let u = profile[uid];
+
+    u.coins++;
+    u.xp++;
+
+    if(u.xp>= (u.lvl * 5)){
+        u.xp = 0;
+        u.lvl += 1;
+    };
+
+
+    fs.writeFile('./profile.json',JSON.stringify(profile),(err)=>{
+        if(err) console.log(err);
+    });
+
     let messageArray = message.content.split(" ");
     let command = messageArray[0].toLowerCase();
     let args = messageArray.slice(1);
@@ -82,8 +92,5 @@ bot.user.setActivity(status[status_res], {type: "Watching"}) }, 10000)
     if(cmd) cmd.run(bot,message,args);
     bot.rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     bot.uId = message.author.id;
-
-    fs.writeFile('./profile.json',JSON.stringify(profile),(err)=>{
-        if(err) console.log(err);
-    });
+});
 bot.login(process.env.BOT_TOKEN)
