@@ -4,9 +4,10 @@ function randomIntInc(low, high) {
     return Math.floor(Math.random() * (high - low + 1) + low);
 }
 let user = message.mentions.users.first();
-let a = randomIntInc(1, 194)
+let content = args.slice(1).join(' ')
 let embed = new Discord.RichEmbed()
-.setDescription(`:jigsaw: IQ ТЕСТ :jigsaw:\nУ ${user.username} ${a} IQ`)
+.setAuthor(`${user.user}`,`${user.displayAvatarURL}`)
+.setDescription(`:jigsaw:`)
 .setColor("#ffffff")
 .setThumbnail(user.displayAvatarURL)
 message.channel.send(embed);}
