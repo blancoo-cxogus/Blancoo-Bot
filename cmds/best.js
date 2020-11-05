@@ -6,13 +6,12 @@ function randomIntInc(low, high) {
 let user = message.mentions.users.first();
 let content = args.slice(1).join(' ')
 let embed = new Discord.RichEmbed()
-.setAuthor(`${user.user}`,`${user.displayAvatarURL}`)
-.setDescription(`:jigsaw:`)
+.setAuthor(`${user.tag}`,`${user.displayAvatarURL}`)
+.setDescription(`${content}`)
 .setColor("#ffffff")
 .setThumbnail(user.displayAvatarURL)
 message.channel.send(embed);}
 
 exports.help = {
-    name:"iq"
-
+    name:"best"
 }
